@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Colors
+    body 
+        #app 
+            include src/App/components/Header.pug
+            main.main 
+                section.hero
+                    .container.container-flex-column
+                        .breadcrumbs 
+                            a(href="#") Главная 
+                            span  &middot;  
+                            a(href="#") Продукты 
+                            span  &middot;  
+                            a(href="#") Краски 
+                        h1.hero-title Краски
+                        include src/App/components/Swiper.pug
+                section.catalog 
+                    .container.container-flex-row
+                        include src/App/components/Filters.pug
+                        include src/App/components/Products.pug
+                        
+            include src/App/components/Cart.pug
+        script(type="module", src="./main.js") 

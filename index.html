@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+  </head>
+  <body> 
+    <div id="app"> 
+      <header class="header container"> 
+        <button class="header-burger" id="open-nav"></button><a class="header-logo" href="#"><img class="header-logo-image" src="../../../assets/images/logo.png" alt="logo"></a>
+        <div class="header-modal" id="nav-modal">
+          <div class="header-wrapper">
+            <button class="close-nav" id="close-nav"></button>
+            <nav class="header-nav">
+              <ul class="header-nav-list">
+                <li><a class="header-nav-link" href="#">Продукты</a></li>
+                <li><a class="header-nav-link" href="#">Цвета</a></li>
+                <li><a class="header-nav-link" href="#">Вдохновение</a></li>
+                <li><a class="header-nav-link" href="#">Советы</a></li>
+                <li><a class="header-nav-link" href="#">Найти магазин</a></li>
+              </ul>
+            </nav><a class="header-contacts" href="tel:+74952217769">+7 (495) 221-77-69 <span class="header-contacts-text">Заказать звонок</span></a>
+            <ul class="header-actions">
+              <li>
+                <button class="header-actions-button" data-title="Поиск"><img src="../../../assets/icons/search.svg" alt="search"></button>
+              </li>
+              <li>
+                <button class="header-actions-button" data-title="Профиль"><img src="../../../assets/icons/profile.svg" alt="profile"></button>
+              </li>
+              <li>
+                <button class="header-actions-button" data-title="Избранное"><img src="../../../assets/icons/heart.svg" alt="favorite"></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="cart" id="open-cart">0</button>
+      </header>
+      <main class="main"> 
+        <section class="hero">
+          <div class="container container-flex-column">
+            <div class="breadcrumbs"> <a href="#">Главная </a><span> &middot;  </span><a href="#">Продукты </a><span> &middot;  </span><a href="#">Краски </a></div>
+            <h1 class="hero-title">Краски</h1>
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"> 
+                  <div class="swiper-container"> 
+                    <h2 class="swiper-title">Краски </h2>
+                    <p class="swiper-description">Идеально подходят для стен и других поверхностей. Найди свой идеальный цвет!</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-container">
+                    <h2 class="swiper-title">Обои</h2>
+                    <p class="swiper-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas fugiat debitis vitae. Sed, rerum illo maxime natus quis facere? Voluptatibus expedita tempora dicta debitis voluptate recusandae aliquam? Dolor, aperiam possimus?</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </section>
+        <section class="catalog"> 
+          <div class="container container-flex-row">
+            <div class="filters-modal" id="filters-modal">
+              <div class="filters-wrapper">
+                <button class="close-filters" id="close-filters"></button>
+                <ul class="catalog-filters"> 
+                  <li class="catalog-filters-item">
+                    <input class="catalog-filters-input" id="new" type="checkbox" name="new">
+                    <label for="new">Новое </label>
+                  </li>
+                  <li class="catalog-filters-item">
+                    <input class="catalog-filters-input" id="instock" type="checkbox" name="instock">
+                    <label for="instock">В наличии</label>
+                  </li>
+                  <li class="sale catalog-filters-item">
+                    <input class="catalog-filters-input" id="sale" type="checkbox" name="sale">
+                    <label for="sale">Распродажа</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="catalog-products">
+              <div class="catalog-products-header">
+                <button class="open-filters" id="open-filters">Фильтры</button><span class="catalog-quantity" id="quantity">0 товаров</span>
+                <select class="catalog-sort" id="catalog-sort">
+                  <option value="expensive">Сначала дорогие</option>
+                  <option value="cheap">Сначала дешевые</option>
+                  <option value="popular">Сначала популярные</option>
+                  <option value="recent">Сначала новые</option>
+                </select>
+              </div>
+              <div class="catalog-products-list" id="catalog-products-list"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <div class="modal" id="cart-modal">
+        <div class="cart"> 
+          <div>
+            <div class="cart-header"> 
+              <h2 class="cart-header-title">Корзина</h2>
+              <button class="cart-header-button" id="close-cart"></button>
+            </div>
+            <div class="cart-container" id="cart"></div>
+          </div>
+          <div> 
+            <div class="cart-footer" id="cart-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./main.js"> </script>
+  </body>
+</html>

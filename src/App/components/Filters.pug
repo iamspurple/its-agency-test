@@ -1,0 +1,13 @@
+.filters-modal#filters-modal
+    .filters-wrapper
+        button.close-filters#close-filters
+        ul.catalog-filters 
+            li.catalog-filters-item
+                input#new.catalog-filters-input(type="checkbox", name="new")
+                label(for="new") Новое 
+            li.catalog-filters-item
+                input#instock.catalog-filters-input(type="checkbox", name="instock")
+                label(for="instock") В наличии
+            li.sale.catalog-filters-item
+                input#sale.catalog-filters-input(type="checkbox", name="sale")
+                label(for="sale") Распродажа
