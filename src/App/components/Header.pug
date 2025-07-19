@@ -1,7 +1,6 @@
 header.header.container 
         button.header-burger#open-nav
-        a(href="#").header-logo
-            img.header-logo-image(src="@assets/images/logo.png", alt="logo") 
+        a(href="#").header-logo  
         .header-modal#nav-modal
             .header-wrapper
                 button.close-nav#close-nav
@@ -22,14 +21,14 @@ header.header.container
                     span.header-contacts-text Заказать звонок
                 ul.header-actions
                     li
-                        button.header-actions-button(data-title='Поиск')
-                            img(src="../../../assets/icons/search.svg", alt="search")
+                        button.header-actions-button.search(data-title='Поиск')
+                            
                     li
-                        button.header-actions-button(data-title='Профиль')
-                            img(src="../../../assets/icons/profile.svg", alt="profile")
+                        button.header-actions-button.profile(data-title='Профиль')
+                            
                     li
-                        button.header-actions-button(data-title='Избранное')
-                            img(src="../../../assets/icons/heart.svg", alt="favorite")
+                        button.header-actions-button.favorite(data-title='Избранное')
+                       
                     
         button.cart#open-cart 0
                 

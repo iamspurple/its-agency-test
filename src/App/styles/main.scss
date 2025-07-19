@@ -120,13 +120,26 @@
       }
     }
 
-    &-logo img {
+    &-logo {
       width: 13rem;
       height: auto;
-      object-fit: contain;
+      position: relative;
 
-      @media screen and (max-width: 1024px) {
-        width: 10rem;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 13rem;
+        aspect-ratio: 1;
+        display: inline-block;
+        background: url(../../../assets/images/logo.png) center/contain
+          no-repeat;
+
+        @media screen and (max-width: 1024px) {
+          width: 10rem;
+        }
       }
     }
 
@@ -192,28 +205,54 @@
         width: 2.5rem;
         aspect-ratio: 1;
         border-radius: 50%;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          aspect-ratio: 1;
+          display: inline-block;
+
+          // @media screen and (max-width: 1024px) {
+          //   width: 10rem;
+          // }
+        }
 
         @media screen and (max-width: 760px) {
           display: flex;
           align-items: center;
           gap: 1rem;
 
-          & img {
-            width: 2rem;
-          }
-
-          &::after {
+          &::before {
             content: attr(data-title);
+            margin-left: 3rem;
             font-size: 1.2rem;
             text-transform: uppercase;
           }
         }
 
         @media screen and (max-width: 620px) {
-          &::after {
+          &::before {
             font-size: 1.6rem;
           }
         }
+      }
+
+      .search::after {
+        background: url(../../../assets/icons/search.svg) center/contain
+          no-repeat;
+      }
+      .profile::after {
+        background: url(../../../assets/icons/profile.svg) center/contain
+          no-repeat;
+      }
+      .favorite::after {
+        background: url(../../../assets/icons/heart.svg) center/contain
+          no-repeat;
       }
     }
     .cart {
