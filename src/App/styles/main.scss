@@ -680,10 +680,12 @@
 
         &-image {
           width: 9rem;
+          height: 9rem;
           aspect-ratio: 1;
 
           @media screen and (max-width: 1280px) {
             width: 6rem;
+            height: 6rem;
           }
         }
 
