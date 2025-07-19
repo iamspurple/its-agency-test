@@ -1,5 +1,12 @@
+const productList = document.getElementById("catalog-products-list");
+
+export const displayError = () => {
+  productList.innerHTML = `
+      <h2>Произошла ошибка, попробуйте ещё раз!</h2>
+    `;
+};
+
 export const displayProducts = (products) => {
-  const productList = document.getElementById("catalog-products-list");
   const quantity = document.getElementById("quantity");
 
   productList.innerHTML = "";

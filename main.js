@@ -6,7 +6,12 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { displayProducts, filterProducts, sortProducts } from "./src/scripts";
+import {
+  displayProducts,
+  filterProducts,
+  sortProducts,
+  displayError,
+} from "./src/scripts";
 
 import "./src/scripts/cart";
 
@@ -24,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((error) => {
       console.error("Error fetching products:", error);
+      displayError();
     });
 
   updateCart();
