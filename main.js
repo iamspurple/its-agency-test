@@ -13,8 +13,6 @@ import {
   displayError,
 } from "./src/scripts";
 
-import "./src/scripts/cart";
-
 let products;
 let filtered;
 
