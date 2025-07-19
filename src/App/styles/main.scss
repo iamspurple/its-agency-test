@@ -367,8 +367,9 @@
 
     .filters-wrapper {
       @media screen and (max-width: 620px) {
+        display: flex;
+        flex-direction: column;
         padding: 2rem 2rem 7rem 2rem;
-        position: relative;
         background-color: white;
         width: 100%;
         height: fit-content;
@@ -377,7 +378,7 @@
 
     .close-filters {
       display: none;
-      justify-self: flex-end;
+      align-self: flex-end;
       width: 3rem;
       aspect-ratio: 1;
       border-radius: 50%;
@@ -468,7 +469,7 @@
         .open-filters {
           display: none;
           text-transform: uppercase;
-          font-size: 1.2rem;
+          font-size: 1.5rem;
           font-weight: 500;
           border: none;
           padding: 1rem;
@@ -485,6 +486,12 @@
           font-weight: 500;
           border: none;
           padding: 1rem;
+        }
+
+        .catalog-sort {
+          @media screen and (max-width: 620px) {
+            font-size: 1.5rem;
+          }
         }
 
         .catalog-quantity {
