@@ -10,7 +10,10 @@
   },
   "devDependencies": {
     "sass-embedded": "^1.89.2",
-    "vite": "^7.0.4",
+    "sharp": "0.34.3",
+    "vite": "7.0.4",
+    "vite-plugin-image-optimizer": "2.0.2",
+    "vite-plugin-pug": "0.4.1",
     "vite-plugin-node-polyfills": "^0.24.0"
   },
   "dependencies": {
